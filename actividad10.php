@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Resultado de Suscripción</title>
+    <title>Comprobantes de Inscripción</title>
 </head>
 <body>
-<?php
-echo "Nombre y Apellido: " . $_REQUEST['nombre'] . "<br>";
-echo "Edad: " . $_REQUEST['edad'] . "<br>";
-echo "DNI: " . $_REQUEST['dni'] . "<br>";
-echo "Fecha de Nacimiento: " . $_REQUEST['fecha_nacimiento'] . "<br>";
-echo "Género: " . $_REQUEST['genero'] . "<br>";
-echo "Lugar de Nacimiento: " . $_REQUEST['lugar_nacimiento'] . "<br>";
-echo "Dirección: " . $_REQUEST['direccion'] . "<br>";
-echo "Intereses y/o Hobbies: " . $_REQUEST['intereses'] . "<br>";
-echo "Comentarios: " . $_REQUEST['comentarios'] . "<br>";
-?>
+    <h1>Comprobantes de Inscripción</h1>
+    <?php
+    $ar = fopen("comprobante.txt", "r") or die("No se pudo abrir el archivo");
+    while (!feof($ar)) {
+        $linea = fgets($ar);
+        $lineasalto = nl2br($linea);
+        echo $lineasalto;
+    }
+    fclose($ar);
+    ?>
 </body>
 </html>
