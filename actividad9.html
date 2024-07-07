@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Formulario de Suscripción</title>
+    <title>Inscripción a Mesas de Examen</title>
 </head>
 <body>
-    <form method="post" action="pagina2.php">
-        Nombre y Apellido: <input type="text" name="nombre"><br>
-        Edad: <input type="text" name="edad"><br>
-        DNI: <input type="text" name="dni"><br>
-        Fecha de Nacimiento: <input type="date" name="fecha_nacimiento"><br>
-        Género: 
-        <select name="genero">
-            <option value="Masculino">Masculino</option>
-            <option value="Femenino">Femenino</option>
-            <option value="Otro">Otro</option>
-        </select><br>
-        Lugar de Nacimiento: <input type="text" name="lugar_nacimiento"><br>
-        Dirección: <input type="text" name="direccion"><br>
-        Intereses y/o Hobbies: <textarea name="intereses"></textarea><br>
-        Comentarios: <textarea name="comentarios"></textarea><br>
-        <input type="submit" value="Enviar">
+    <h1>Formulario de Inscripción</h1>
+    <form action="actividad9.php" method="post">
+        Apellidos y nombres:<br>
+        <input type="text" name="nombre" required><br><br>
+        
+        DNI:<br>
+        <input type="text" name="dni" required><br><br>
+        
+        Fecha de Nacimiento:<br>
+        <input type="date" name="fecha_nacimiento" required><br><br>
+        
+        Curso Actual:<br>
+        <input type="text" name="curso_actual" required><br><br>
+        
+        Cantidad de Materias adeudadas:<br>
+        <input type="number" name="materias_adeudadas" required><br><br>
+        
+        Materia en la que se inscribe (Materia y Curso):<br>
+        <input type="text" name="materia_inscripcion" required><br><br>
+        
+        Fecha de Inscripción:<br>
+        <input type="date" name="fecha_inscripcion" required><br><br>
+        
+        <input type="submit" value="Confirmar Inscripción">
     </form>
 </body>
 </html>
